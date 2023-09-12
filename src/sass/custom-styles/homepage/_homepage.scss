@@ -11,14 +11,139 @@
  /********************** Homepage header style ***********************
  -------------------------------------------------------------------*/
 
+ .section-padding {
+    padding: 40px 50px;
+ }
+ h1,h2,h3,h4,h5,h6 {
+    color: #331B3B;
+ }
+
 .header-wrapper {
     #navbar {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        padding: 40px 50px;
 
         .part-one,
-        .part-two {
+        .part-two,
+        .part-three {
             flex-basis: 33.3%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 36px;
+            .nav-item {
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+
+        .nav-logo {
+            text-align: center;
+            .logo {
+                font-size: 36px;
+            }
+            
+        }
+
+        .social-nav {
+            display: flex;
+            justify-content: flex-end;
+
+            .social-items {
+                display: flex;
+                gap: 20px;
+            }
+        }
+    }
+
+    .main-header {
+        position: relative;
+        .grid {
+            display: grid;
+            grid-template-columns: 50% auto;
+
+            .content-col {
+                .content-heading {
+                    .heading-text {
+                        font-size: calc(37px + (88 - 37) * ((100vw - 320px) / (1920 - 320)));
+                        
+                        
+                        &.bold-heading {
+                            font-weight: 600;
+                        }
+    
+                        &.underline {
+                            position: relative;
+                            width: fit-content;
+    
+                            span {
+                                position: absolute;
+                                background-color: #FDC021;
+                                content: "";
+                                left: 0;
+                                bottom: 5px;
+                                height: 25px;
+                                width: 100%;
+                                z-index: -1;
+                            }
+                        }
+                    }
+                }
+
+                .text {
+                    max-width: 620px;
+                    width: 100%;
+                    padding: 40px 0;
+                    text-align: justify;
+
+                    p {
+                        width: 100%;
+                    }
+                }
+
+                .btn {
+                    padding: 20px 48px;
+                    background: #331B3B;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-weight: 600;
+                    border-radius: 10px;
+                    width: fit-content;
+                    display: block;
+                }
+
+            }
+
+            .photo-col {
+                display: flex;
+                justify-content: center;
+                .bg-1 {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transform: translateY(-135px);
+                }
+                .bg-2 {
+                    margin-top: -60px;
+                    text-align: center;
+                    img {
+                        height: 84vh;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+                .bg-3 {
+                    position: absolute;
+                    top: 30px;
+                    right: 100px;
+
+                }
+            }
         }
     }
 }
