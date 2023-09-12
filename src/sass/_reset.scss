@@ -7,6 +7,8 @@
  Styles should be compiled using gulp task management.
  ----------------------------------------------------------------------------------*/
 
+ @import "./_utilities/fonts";
+
 * {
     margin: 0;
     padding: 0;
@@ -46,24 +48,7 @@ strong {
     font-weight: 700;
 }
 
-div#main-wrapper {
-    position: relative;
-    margin-left: 0px;
-    margin-right: 0;
-    //width: 100%;
 
-    @include max-width-1023 {
-        padding-bottom: 0;
-        margin-left: 0;
-    }
-
-    @include smartPhone_portrait {
-        position: relative;
-        display: block;
-        height: 100%;
-        margin-left: 0;
-    }
-}
 
 h1,
 h2,
@@ -139,26 +124,6 @@ div#main-wrapper.margin-x3 {
         overflow: hidden;
         width: 100%;
     }
-
-    @include iPad-landscape {
-        left: 0;
-        width: 100%;
-    }
-
-    @include max-width-1023 {
-        left: 0;
-        width: 100%;
-    }
-
-    @include phone-767 {
-        position: relative;
-        overflow: visible;
-    }
-
-    @include iPad-landscape {
-        position: relative;
-        overflow: visible;
-    }
 }
 
 /* Gallery filter font familiy */
@@ -206,4 +171,8 @@ div#main-wrapper.margin-x3 {
         align-items: center;
         justify-content: center;
     }
+}
+
+.logo {
+    @include secondary-font;
 }

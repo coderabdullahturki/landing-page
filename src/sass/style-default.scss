@@ -7,14 +7,10 @@
  Styles should be compiled using gulp task management.
  ----------------------------------------------------------------------------------*/
 
-/* *Default Mixins */
-@import "./_mixins/mixin"; 
 
 /* Color variables */
 @import "./_utilities/colors";
 
-/* *Language Switcher */
-@import "./_utilities/language-switcher/language-switcher";
 
 /* *Preloader style */
 @import "./_utilities/preloader/preloader";
@@ -25,5 +21,4 @@
 /* *Project reset style */
 @import "reset";
 
-/* *Common/default styles */
-@import "common";
+

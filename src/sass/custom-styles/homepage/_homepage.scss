@@ -11,3 +11,14 @@
  /********************** Homepage header style ***********************
  -------------------------------------------------------------------*/
 
+.header-wrapper {
+    #navbar {
+        display: flex;
+        justify-content: space-between;
+
+        .part-one,
+        .part-two {
+            flex-basis: 33.3%;
+        }
+    }
+}
