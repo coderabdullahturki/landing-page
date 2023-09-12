@@ -2,7 +2,7 @@
 node_modules
 
 # build artifacts
-dist
+# dist
 css
 
 # secrets and errors
