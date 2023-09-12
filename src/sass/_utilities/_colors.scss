@@ -1,0 +1,33 @@
+/*------------------------------------------------------------------------------------
+
+
+ =============================================================================
+ Filename: _colors.scss
+ =============================================================================
+
+ Styles should be compiled using gulp task management.
+ ----------------------------------------------------------------------------------*/
+
+// *Color Variable
+// $primary-color: #ae8622;
+$primary-color: #c89010;
+$secondary-color: #eff0d7;
+$olive-color : #626409;
+$text-black: #000;
+$primary-hover: #866b21;
+
+/* Text color */
+$text-white : #fff;
+
+/* Color Secondary */
+.color-primary{
+    color: $primary-color;
+}
+
+.color-primary-bg{
+    background-color: $primary-color;
+}
+.color-black{
+    color: #111;
+}
+

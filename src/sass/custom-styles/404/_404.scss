@@ -1,0 +1,86 @@
+/*------------------------------------------------------------------------------------
+
+ =============================================================================
+ Filename: _404.scss
+ =============================================================================
+
+ Styles should be compiled using gulp task management.
+ ----------------------------------------------------------------------------------*/
+
+.not-found-block {
+    margin: 30px auto;
+    max-width: 900px;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+
+    @include smartPhone_portrait{
+        height: 100%;
+        margin: 115px auto 30px;
+        padding: 25px 15px;
+    }
+
+    .grid-div {
+        
+
+        .svg-col {
+            margin-bottom: 50px;
+            img {
+                max-width: 385px;
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+                
+                @include phone-601{
+                    max-width: 260px;
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+
+            .title {
+                @include secondary-title;
+                text-align: center;
+                margin-bottom: 20px;
+                color: $primary-color;;
+
+                @include phone-601{
+                    font-size: 1.8rem;
+                }
+            }
+
+            .subtitle {
+                font-size: 1.6rem;
+                font-weight: 400;
+                text-align: center;
+
+                @include phone-601{
+                    font-size: 1.4rem;
+                }
+
+                a{
+                    transition: all .5s ease;
+
+                    &:hover{
+                        text-decoration: underline;
+                        color: rgba($primary-color, 0.8);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#countdown{
+    width: 15px;
+    text-align: center;
+    display: inline-block;
+}

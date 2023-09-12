@@ -1,0 +1,64 @@
+/*------------------------------------------------------------------------------------
+ @package: Olive Green Hotel Custom Web Design/Development by WD
+ @author: Zack / Vasilis / Eleni
+ @olivegreenhotel.com
+ @copyright: Copyright 2023 - Web Dynamic Greece / Asia
+
+ =============================================================================
+ Filename: _back-to-top.scss
+ =============================================================================
+
+ Styles should be compiled using gulp task management.
+ ----------------------------------------------------------------------------------*/
+
+/* JavaScript back to top button */
+.progress {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  width: 80px;
+  height: 80px;
+  transition: all 0.5s ease;
+  transform: translateY(100%);
+
+  &:before{
+    background: url(../assets/icons/up-arrow.svg) no-repeat;
+    background-size: contain;
+    bottom: 16px;
+    content: "";
+    height: 23px;
+    position: absolute;
+    right: 12px;
+    width: 30px;
+  }
+
+  &.show{
+    transform: translateY(0%);
+  }
+
+  .percent-indicator {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  svg {
+    position: relative;
+    cursor: pointer;
+  }
+
+circle {
+  fill: rgba(255, 255, 255, 1);
+  fill: transparent;
+}
+
+svg .progress-circle {
+  fill: transparent;
+  stroke-width: 2px;
+  stroke: #0e92b8;
+  stroke-dasharray: 126;
+  stroke-dashoffset: 126;
+}
+}

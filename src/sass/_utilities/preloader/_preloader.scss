@@ -1,0 +1,41 @@
+/*------------------------------------------------------------------------------------
+ @package: Olive Green Hotel Custom Web Design/Development by WD
+ @author: Zack / Vasilis / Eleni
+ @olivegreenhotel.com
+ @copyright: Copyright 2023 - Web Dynamic Greece / Asia
+
+ =============================================================================
+ Filename: _preloader.scss
+ =============================================================================
+
+ Styles should be compiled using gulp task management.
+ ----------------------------------------------------------------------------------*/
+
+.preloader-body {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    transition: 0.5s all;
+    z-index: 9999;
+}
+.preloader-body.done {
+    visibility: hidden;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+.circles{position:absolute;top:50%;left:50%;width:60px;height:20px;margin:-10px 0 0 -30px;text-align:center;background-color:transparent!important;border-color:transparent!important; display: flex;}
+.circles div{background-color: $primary-color; width:15px;height:15px;border-radius:50%;display:inline-block;-webkit-animation:threeBounceDelay 2.1s infinite ease-in-out;animation:threeBounceDelay 2.1s infinite ease-in-out;-webkit-animation-fill-mode:both;animation-fill-mode:both;margin:0 1px;border-color:transparent!important;}
+.circles .bounce2{-webkit-animation-delay:-1.4s;animation-delay:-1.4s;}
+.circles .bounce3{-webkit-animation-delay:-0.7s;animation-delay:-0.7s;}
+@keyframes threeBounceDelay{0%,
+    30%,
+    100%{-webkit-transform:scale(0.25);transform:scale(0.25);opacity:0.25;}
+    15%{-webkit-transform:scale(1);transform:scale(1);opacity:1;}
+}

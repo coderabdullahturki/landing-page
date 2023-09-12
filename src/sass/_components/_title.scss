@@ -1,0 +1,68 @@
+/*------------------------------------------------------------------------------------
+
+ =============================================================================
+ Filename: _title.scss
+ =============================================================================
+
+ Styles should be compiled using gulp task management.
+ ----------------------------------------------------------------------------------*/
+
+/* Primary Title
+--------------- */
+@mixin primary-title {
+    font-size: calc(30px + (55 - 30) * ((100vw - 320px) / (1920 - 320)));
+    color: #000000;
+    text-align: center;
+    line-height: 1.1;
+    padding: 0 15px;
+    font-weight: 500;
+
+    span{
+        display: block;
+    }
+}
+
+.primary-title-wrapper{
+  text-align: center;
+}
+
+/* Title Wrapper */
+.title-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Secondary Title
+------------------ */
+@mixin secondary-title {
+    position: relative;
+    line-height: 1.2;
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    color: #121212;
+    font-size: calc(24px + (60 - 24) * ((100vw - 320px) / (1920 - 320)));
+    @include secondary-font;
+}
+
+
+/* Use by class name
+-------------------- */
+.primary-title{
+    @include primary-title;
+}
+
+.secondary-title{
+    @include secondary-title;
+}
+
+// room title
+
+.room-section-title{
+    background-color:$secondary-color;
+    color: #121212;
+    padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))) calc(30px + (60 - 30) * ((100vw - 30px) / (1920 - 320)));
+    line-height: 1.2;
+}

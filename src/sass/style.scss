@@ -1,0 +1,39 @@
+/*------------------------------------------------------------------------------------
+
+ =============================================================================
+ Filename: style.scss
+ =============================================================================
+
+ Styles should be compiled using gulp task management.
+ ----------------------------------------------------------------------------------*/
+
+@import "./_mixins/mixin"; // Mixins
+@import "./_utilities/colors"; //colors
+
+/* 404 page */
+@import "./custom-styles/404/404";
+
+/* Navigation */
+@import "./custom-styles/nav/nav";
+
+/* Hamburger */
+@import "./custom-styles/hamburger-icon/hamburger";
+
+/* *Footer */
+@import "./custom-styles/footer/footer";
+
+/* Home/Index page */
+@import "./custom-styles/homepage/homepage";
+
+/* *Inner pages */
+@import "./custom-styles/inner-page";
+
+/* *FAQ page */
+@import "./custom-styles/faq/faq";
+
+/* *FAQ page */
+@import "./custom-styles/contact/contact";
+
+/* *Request form */
+@import "./custom-styles/request-form/request-form";
+

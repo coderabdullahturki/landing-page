@@ -1,0 +1,209 @@
+/*------------------------------------------------------------------------------------
+
+ =============================================================================
+ Filename: _reset.scss
+ =============================================================================
+
+ Styles should be compiled using gulp task management.
+ ----------------------------------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: calc(15px + (21 - 15) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 400;
+    position: relative;
+    color: $text-black;
+    line-height: 1.5;
+    min-height: 100vh;
+    @include primary-font;
+}
+img{
+    max-width: 100%;
+}
+
+a:hover {
+    color: inherit;
+}
+
+strong {
+    font-weight: 700;
+}
+
+div#main-wrapper {
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0;
+    //width: 100%;
+
+    @include max-width-1023 {
+        padding-bottom: 0;
+        margin-left: 0;
+    }
+
+    @include smartPhone_portrait {
+        position: relative;
+        display: block;
+        height: 100%;
+        margin-left: 0;
+    }
+}
+
+h1,
+h2,
+h3,
+h3,
+h4,
+h5,
+h6,
+.title {
+    margin: 0;
+    font-weight: 400;
+    line-height: inherit;
+    line-height: 1;
+}
+p{
+    margin-bottom: calc(7px + (15 - 7) * ((100vw - 320px) / (1920 - 320)));
+}
+p:last-child {
+    margin: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #29212b;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+svg {
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+h1 sub,
+h1 sup,
+h2 sub,
+h2 sup {
+    font-size: 46%;
+    top: -1.1em;
+}
+
+div#main-wrapper.margin-x3 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.fancybox-caption-wrap {
+    display: none;
+}
+
+.smooth-scroll-wrapper {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: auto;
+    overflow: hidden;
+    width: 100%;
+
+    @media screen and (max-width: 1201px) {
+        position: relative;
+    }
+
+    &.scroll-active {
+        position: relative;
+        z-index: 2;
+        top: 0;
+        left: 0px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    @include iPad-landscape {
+        left: 0;
+        width: 100%;
+    }
+
+    @include max-width-1023 {
+        left: 0;
+        width: 100%;
+    }
+
+    @include phone-767 {
+        position: relative;
+        overflow: visible;
+    }
+
+    @include iPad-landscape {
+        position: relative;
+        overflow: visible;
+    }
+}
+
+/* Gallery filter font familiy */
+.media-boxes-filter>li a{
+    @include primary-font;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: 10px;
+    scrollbar-color: #29212b #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #29212b;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+  /* ===== Scrollbar CSS ===== */
+
+@media screen and (min-width: 1230px) {
+
+    footer .container-fluid:not(.offset-left):not(.offset-right),
+    section .container-fluid:not(.offset-left):not(.offset-right) {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+@media only screen and (min-width: 1675px) and (max-width: 1685px) {
+    .sl-wrapper .sl-navigation button {
+        width: 68px;
+        height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

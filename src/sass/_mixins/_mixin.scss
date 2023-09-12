@@ -1,0 +1,183 @@
+/*------------------------------------------------------------------------------------
+
+
+ =============================================================================
+ Filename: _mixin.scss
+ =============================================================================
+
+ Styles should be compiled using gulp task management.
+ ----------------------------------------------------------------------------------*/
+
+/* Fonts mixin [scss/_utilities/_fonts.scss] */
+@import "../_utilities/fonts";
+
+/* COlors mixin [scss/_utilities/_color.scss] */
+@import "../_utilities/colors";
+
+/* button mixin [scss/_components/_button.scss] */
+@import "../_components/button";
+
+/* Title mixin [scss/_components/_title.scss] */
+@import "../_components/title";
+
+/* Flex Mixins */
+@import "../_components/flex";
+
+/* Responsive Breakpoints [scss/_mixins/_responsive-breakpoints.scss] */
+@import "./responsive-breakpoints";
+
+
+/* Image mixing for webp/no-webp 
+--------------------------------*/
+@mixin webp-background($img, 
+    $repeat: no-repeat,
+    $position: center,
+    $type: '.png') {
+    background: url('../assets/images/#{$img}.webp') $repeat $position;
+
+    .no-webp & {
+    background-image: url('../assets/images/#{$img}#{$type}');
+
+   }
+}
+
+/* Container width */
+@mixin wd-container{
+    width: 100%;
+    max-width: 1460px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 1560px) {
+      max-width: calc(1330px + (1460 - 1330) * ((100vw - 1560px) / (1920 - 1560)));
+    }
+
+    @media screen and (max-width: 1560px) {
+      padding: 0 5%;
+    }
+
+    @include phone-480{
+      padding: 0 7%;
+    }
+}
+
+.section-padding{
+  padding-right: calc(25px + (100 - 25) * ((100vw - 320px) / (1920 - 320)));
+  padding-left: calc(25px + (100 - 25) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.content-box{
+  max-width: 960px;
+  margin: 0 auto;
+
+  .text{
+    margin-top: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+
+    @include max-width-1023{
+      padding: 0 30px;
+    }
+  }
+}
+
+/* Button wrapper */
+  .button-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: calc(15px + (65 - 15) * ((100vw - 320px) / (1920 - 320)));
+      margin-top: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
+      padding-top: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
+
+      a {
+          background: $primary-color;
+          color: #fff;
+          padding: calc(20px + (25 - 20) * ((100vw - 320px) / (1920 - 320))) 10px;
+          display: block;
+          border-radius: 5px;
+          max-width: 450px;
+          width: 100%;
+          text-align: center;
+          font-weight: 500;
+          font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1920 - 320)));
+          line-height: 1;
+          transition: all 0.5s ease;
+
+          &:hover{
+            background-color: $primary-hover;
+          }
+
+          &.check-more-btn{
+              background-color: #4f4b49;
+
+              &:hover{
+                background-color: $primary-hover;
+              }
+          }
+      }
+  }
+
+/* common text */
+.text{
+    font-size: calc(15px + (23 - 15) * ((100vw - 320px) / (1920 - 320)));
+    width: 100%;
+    line-height: 1.5;
+    font-weight: 400;
+
+    p:not(:last-child){
+      margin-bottom: calc(15px + (40 - 15) * ((100vw - 320px) / (1920 - 320)));
+    }
+}
+
+.wd-container{
+  @include wd-container;
+}
+
+
+@mixin container-padding{
+    padding: 0 5%;
+}
+.container-padding{
+    @include container-padding;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-justify-center{
+  justify-content: center;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.text-left{
+  text-align: left;
+}
+.text-justify{
+  text-align: justify;
+}
+.justify-content-center{
+  justify-content: center !important;
+}
+.mr-0{
+  margin-right: 0 !important;
+}
+.mt-0{
+  margin-top: 0 !important;
+}
+.mt-30{
+    margin-top: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+}
+.height-205{
+  height: 205px !important;
+}
+
+.pb-80{
+  padding-bottom: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320))) !important;
+}

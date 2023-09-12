@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------------------------
+
+ =============================================================================
+ Filename: style-default.scss
+ =============================================================================
+
+ Styles should be compiled using gulp task management.
+ ----------------------------------------------------------------------------------*/
+
+/* *Default Mixins */
+@import "./_mixins/mixin"; 
+
+/* Color variables */
+@import "./_utilities/colors";
+
+/* *Language Switcher */
+@import "./_utilities/language-switcher/language-switcher";
+
+/* *Preloader style */
+@import "./_utilities/preloader/preloader";
+
+/* *Back to Top style */
+@import "./_utilities/back-to-top/back-to-top";
+
+/* *Project reset style */
+@import "reset";
+
+/* *Common/default styles */
+@import "common";
